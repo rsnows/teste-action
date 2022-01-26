@@ -3,7 +3,10 @@
 
 
 name: Linting
-on: [push]
+on:
+  pull request:
+    branches:
+      - master
 
 jobs:
   prose:
