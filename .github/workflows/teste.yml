@@ -1,8 +1,5 @@
 name: Linting
-on:
-  pull request:
-    branches:
-      - master
+on: [push]
 
 jobs:
   prose:
