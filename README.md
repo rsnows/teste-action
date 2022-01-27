@@ -1,1 +1,1 @@
-This is a text with mayn errors. Well, atcually, only two.
+This is a text with mayn errors. Well, atcually, only twos.
