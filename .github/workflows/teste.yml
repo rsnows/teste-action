@@ -1,9 +1,11 @@
 - name: Vale Linter
   uses: errata-ai/vale-action@v1.4.3
 
-
 name: Linting
-on: [push]
+on:
+  pull request:
+    branches:
+      - master
 
 jobs:
   prose:
