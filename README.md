@@ -1,1 +1,1 @@
-This is a text with mayn errors. Well, atcually, only twos.
+This is a text with many errors. Well, actually, only two.
