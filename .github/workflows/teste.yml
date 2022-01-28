@@ -26,7 +26,7 @@ jobs:
 
 # name: Linting
 # on:
-#   pull_request:
+#   pull_requestle:
 #     branches: [ master ]
 
 # jobs:
