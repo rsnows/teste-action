@@ -18,11 +18,11 @@ jobs:
         ref: ${{ github.event.pull_request.head.ref }}
 
     - name: Run Vale linter
-    run: >
-      docker run \
-      -v $(pwd)/./:/docs-vale-action \
-      -w /docs-vale-action \
-      jdkato/vale:v2.11.2 --minAlertLevel error $(pwd)/docs/spec/endpoints/applications/schemas $(pwd)/docs/spec/endpoints/cronjobs/schemas
+      run: >
+        docker run \
+        -v $(pwd)/./:/docs-vale-action \
+        -w /docs-vale-action \
+        jdkato/vale:v2.11.2 --minAlertLevel error $(pwd)/docs/spec/endpoints/applications/schemas $(pwd)/docs/spec/endpoints/cronjobs/schemas
 
 # name: Linting
 # on:
