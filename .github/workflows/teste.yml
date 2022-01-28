@@ -5,8 +5,8 @@ on:
   # não confundir com paths passados para o comando `vale`, ainda que provavelmente
   # sejam idênticos
     paths:
-      - $(pwd)/docs/spec/endpoints/applications/schemas/
-      - $(pwd)/docs/spec/endpoints/cronjobs/schemas/
+      - '$(pwd)/docs/spec/endpoints/applications/schemas/'
+      - '$(pwd)/docs/spec/endpoints/cronjobs/schemas/'
  
 jobs:
   prose:
