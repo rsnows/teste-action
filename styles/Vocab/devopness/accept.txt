@@ -1,0 +1,12 @@
+hostname
+(?=\.)uk
+[dD]evopness
+boolean
+html
+drupal
+http
+https
+unix
+UNIX
+tmp
+_dev
