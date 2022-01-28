@@ -1,28 +1,28 @@
 name: Vale Docs Linting
 on:
- pull_request:
+  pull_request:
   # paths = lista de diretórios que se tiverem alterações dispararão o check na PR
   # não confundir com paths passados para o comando `vale`, ainda que provavelmente
   # sejam idênticos
-   paths:
-     - $(pwd)/docs/spec/endpoints/applications/schemas/
-     - $(pwd)/docs/spec/endpoints/cronjobs/schemas/
+  paths:
+    - $(pwd)/docs/spec/endpoints/applications/schemas/
+    - $(pwd)/docs/spec/endpoints/cronjobs/schemas/
  
 jobs:
- prose:
-   runs-on: ubuntu-latest
-   steps:
-     - name: Checkout
-       uses: actions/checkout@v2
-       with:
-         ref: ${{ github.event.pull_request.head.ref }}
+  prose:
+  runs-on: ubuntu-latest
+  steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+      with:
+        ref: ${{ github.event.pull_request.head.ref }}
  
-     - name: Run Vale linter
-       run: >
-         docker run \
-           -v $(pwd)/./:/docs-vale-action \
-           -w /docs-vale-action \
-           jdkato/vale:v2.11.2 --minAlertLevel error $(pwd)/docs/spec/endpoints/applications/schemas $(pwd)/docs/spec/endpoints/cronjobs/schemas
+    - name: Run Vale linter
+      run: >
+        docker run \
+          -v $(pwd)/./:/docs-vale-action \
+          -w /docs-vale-action \
+          jdkato/vale:v2.11.2 --minAlertLevel error $(pwd)/docs/spec/endpoints/applications/schemas $(pwd)/docs/spec/endpoints/cronjobs/schemas
 
 # name: Linting
 # on:
