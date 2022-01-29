@@ -19,7 +19,7 @@ jobs:
 
     - name: Run Vale linter
       run:
-        docker run -v ./:/docs-vale-action -w /docs-vale-action jdkato/vale:v2.11.2 --minAlertLevel error docs/spec/endpoints/applications/schemas/ docs/spec/endpoints/cronjobs/schemas/
+        docker run -v $(pwd):/docs-vale-action -w /docs-vale-action jdkato/vale:v2.11.2 --minAlertLevel error docs/spec/endpoints/applications/schemas/ docs/spec/endpoints/cronjobs/schemas/
 
 # name: Linting
 # on:
