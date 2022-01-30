@@ -1,12 +1,9 @@
 name: Vale Docs Linting
 on:
   push:
-  # paths = lista de diretórios que se tiverem alterações dispararão o check na PR
-  # não confundir com paths passados para o comando `vale`, ainda que provavelmente
-  # sejam idênticos
     paths:
-      - 'docs/spec/endpoints/applications/schemas/**.yaml'
-      - 'docs/spec/endpoints/cronjobs/schemas/**.yaml'
+      - 'docs/spec/endpoints/applications/schemas/'
+      - 'docs/spec/endpoints/cronjobs/schemas/'
  
 jobs:
   prose:
