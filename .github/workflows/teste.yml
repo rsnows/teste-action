@@ -19,36 +19,4 @@ jobs:
 
     - name: Run Vale linter
       run:
-        docker run \
-        -v $(pwd):/docs-vale-action -w /docs-vale-action jdkato/vale:v2.11.2 \
-        --minAlertLevel error docs/spec/endpoints/applications/schemas/ docs/spec/endpoints/cronjobs/schemas/
-
-# name: Linting
-# on:
-#   pull_requestle:
-#     branches: [ master ]
-
-# jobs:
-#   prose:
-#     runs-on: ubuntu-latest
-#     steps:
-#     - name: Checkout
-#       uses: actions/checkout@master
-
-#     - name: Vale
-#       uses: errata-ai/vale-action@v1.4.2
-#       with:
-#         # Optional
-#         styles: |
-#           https://github.com/errata-ai/Microsoft/releases/latest/download/Microsoft.zip
-#           https://github.com/errata-ai/write-good/releases/latest/download/write-good.zip
-
-#         # Optional
-#         config: https://raw.githubusercontent.com/errata-ai/vale/master/.vale.ini
-
-#         # Optional
-#         files: path/to/lint
-#       env:
-#         # Required, set by GitHub actions automatically:
-#         # https://docs.github.com/en/actions/security-guides/automatic-token-authentication#about-the-github_token-secret
-#         GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+        docker run -v $(pwd):/docs-vale-action -w /docs-vale-action jdkato/vale:v2.11.2 --minAlertLevel error docs/spec/endpoints/applications/schemas/ docs/spec/endpoints/cronjobs/schemas/
