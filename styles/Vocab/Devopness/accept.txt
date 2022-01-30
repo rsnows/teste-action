@@ -1,7 +1,7 @@
 boolean
 cron
 dev
-(?i)devopness
+(?i)Devopness
 drupal
 hostname
 html
