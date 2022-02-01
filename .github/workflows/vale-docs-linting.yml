@@ -4,7 +4,7 @@ on:
     paths:
       - 'docs/spec/endpoints/applications/schemas/*'
       - 'docs/spec/endpoints/cronjobs/schemas/*'
- 
+
 jobs:
   prose:
     runs-on: ubuntu-latest
