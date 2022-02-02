@@ -11,6 +11,8 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v2
+      with:
+        ref: ${{ github.event.pull_request.head.ref }}
 
     - name: Run Vale linter
       uses: errata-ai/vale-action@v1.4.3
