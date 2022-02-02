@@ -16,5 +16,7 @@ jobs:
 
     - name: Run Vale linter
       uses: errata-ai/vale-action@v1.4.3
+      with:
+        files: __onlyModified
       env:
         GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
