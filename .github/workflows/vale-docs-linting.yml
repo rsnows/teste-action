@@ -1,9 +1,9 @@
 name: Vale Docs Linting
 on:
-    push:
-      paths:
-        - 'docs/spec/endpoints/applications/schemas/*'
-        - 'docs/spec/endpoints/cronjobs/schemas/*'
+  push:
+    paths:
+    - 'docs/spec/endpoints/applications/schemas/*'
+    - 'docs/spec/endpoints/cronjobs/schemas/*'
 
 jobs:
   prose:
